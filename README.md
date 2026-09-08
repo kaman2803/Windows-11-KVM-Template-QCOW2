@@ -2721,43 +2721,32 @@ SHA-256       : 303f7ae40dad495d6ae474fdc571df58958a4dbc5c37a522d80f9a203867949d
 
 À l'issue de cette partie, tous les composants nécessaires à la création de `win11-lab` ont été préparés et vérifiés.
 
-```text
-┌────────────────────────────────────────────────────────────┐
-│       WINDOWS 11 — PRÉPARATION DE LA VM MAÎTRE            │
-├────────────────────────────────────────────────────────────┤
-│ VM                     : win11-lab                         │
-│                                                            │
-│ CPU                    : 4 vCPU                            │
-│ RAM                    : 8 GiB                             │
-│ Machine                : Q35                               │
-│                                                            │
-│ Disque                 : win11-lab.qcow2                   │
-│ Format                 : QCOW2                             │
-│ Capacité               : 80 GiB                            │
-│ Intégrité              : ✅                               │
-│ Propriétaire           : libvirt-qemu                      │
-│ Groupe                 : kvm                               │
-│ Permissions            : 660                               │
-│                                                            │
-│ Firmware               : UEFI / OVMF                       │
-│ OVMF CODE              : ✅                               │
-│ OVMF VARS              : ✅                               │
-│                                                            │
-│ TPM                    : 2.0                               │
-│ Backend TPM            : emulator                          │
-│ swtpm                  : 0.7.3                             │
-│                                                            │
-│ Réseau                 : default                           │
-│ Mode                   : NAT                               │
-│ Bridge                 : virbr0                            │
-│ Carte                  : VirtIO                           │
-│                                                            │
-│ ISO Windows 11         : ✅                               │
-│ ISO VirtIO             : ✅                               │
-├────────────────────────────────────────────────────────────┤
-│       PRÉPARATION DE LA VM : ✅ VALIDÉE                   │
-└────────────────────────────────────────────────────────────┘
-```
+| Élément | Configuration |
+|---|---|
+| **VM** | `win11-lab` |
+| **CPU** | 4 vCPU |
+| **RAM** | 8 GiB |
+| **Machine** | Q35 |
+| **Disque** | `win11-lab.qcow2` |
+| **Format** | QCOW2 |
+| **Capacité** | 80 GiB |
+| **Intégrité** | ✅ |
+| **Propriétaire** | `libvirt-qemu` |
+| **Groupe** | `kvm` |
+| **Permissions** | `660` |
+| **Firmware** | UEFI / OVMF |
+| **OVMF CODE** | ✅ |
+| **OVMF VARS** | ✅ |
+| **TPM** | 2.0 |
+| **Backend TPM** | emulator |
+| **swtpm** | 0.7.3 |
+| **Réseau** | `default` |
+| **Mode** | NAT |
+| **Bridge** | `virbr0` |
+| **Carte** | VirtIO |
+| **ISO Windows 11** | ✅ |
+| **ISO VirtIO** | ✅ |
+| **État** | **✅ PRÉPARATION DE LA VM VALIDÉE** |
 
 ## État de la Partie 4
 
@@ -4389,25 +4378,28 @@ Elle est donc arrêtée, persistante dans libvirt et **ne démarrera pas automat
 
 ## 6.30 — État final de cette étape
 
-```text
-┌─────────────────────────────────────────────────────┐
-│       WIN11-LAB — ÉTAT APRÈS INSTALLATION          │
-├─────────────────────────────────────────────────────┤
-│ Windows 11 installé              : ✅              │
-│ Windows configuré                 : ✅              │
-│ Mises à jour effectuées          : ✅              │
-│ Réseau VirtIO                    : ✅              │
-│ ISO Windows déconnectée          : ✅              │
-│ ISO VirtIO déconnectée           : ✅              │
-│ Disque win11-lab.qcow2 conservé  : ✅              │
-│ UEFI / Secure Boot               : ✅              │
-│ TPM 2.0                          : ✅              │
-│ 4 vCPU                           : ✅              │
-│ 8 GiB RAM                        : ✅              │
-│ VM arrêtée                       : ✅              │
-│ Autostart                        : ❌ Désactivé    │
-└─────────────────────────────────────────────────────┘
-```
+## WIN11-LAB — État après installation
+
+| Élément                               | État        |
+| ------------------------------------- | ----------- |
+| **Windows 11 installé**               | ✅           |
+| **Windows configuré**                 | ✅           |
+| **Mises à jour effectuées**           | ✅           |
+| **Réseau VirtIO**                     | ✅           |
+| **ISO Windows déconnectée**           | ✅           |
+| **ISO VirtIO déconnectée**            | ✅           |
+| **Disque `win11-lab.qcow2` conservé** | ✅           |
+| **UEFI / Secure Boot**                | ✅           |
+| **TPM 2.0**                           | ✅           |
+| **4 vCPU**                            | ✅           |
+| **8 GiB RAM**                         | ✅           |
+| **VM arrêtée**                        | ✅           |
+| **Autostart**                         | ❌ Désactivé |
+
+### État global
+
+**✅ VM `win11-lab` correctement installée et préparée.**
+
 
 ## Conclusion
 
